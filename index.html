@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Security research by Christian Terörde (0xWaidwerk). Publicly credited findings, vendor advisories and shipped fixes.">
+  <meta name="color-scheme" content="light">
+  <title>Christian Terörde · Security research</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#findings">Skip to findings</a>
+  <header class="masthead wrap">
+    <a class="identity" href="./" aria-label="Christian Terörde, home"><span class="monogram" aria-hidden="true">CT</span><span>Christian Terörde<span class="handle">0xWaidwerk</span></span></a>
+    <a class="text-link" href="https://github.com/ChristianTeroerde">GitHub <span aria-hidden="true">↗</span></a>
+  </header>
+  <main>
+    <section class="intro wrap" aria-labelledby="page-title">
+      <p class="eyebrow">Independent security research</p>
+      <h1 id="page-title">Findings that<br>made it into <em>fixes.</em></h1>
+      <p class="lede">A personal hall of fame: publicly credited research, with the advisories and acknowledgments behind it.</p>
+      <div class="intro-bottom"><a class="button" href="#findings">Explore the findings <span aria-hidden="true">↓</span></a><p><strong>02</strong> publicly credited findings</p></div>
+    </section>
+    <section class="research" id="findings" aria-labelledby="findings-title">
+      <div class="wrap">
+        <div class="section-heading"><h2 id="findings-title">Selected disclosures</h2><span>2026</span></div>
+        <article class="finding" aria-labelledby="espnet-title">
+          <div class="finding-index"><span>01 / ESPnet</span><span class="status">Fixed · Public credit</span></div>
+          <div class="finding-body">
+            <p class="category">Machine learning · Unsafe deserialization</p>
+            <h3 id="espnet-title">Unsafe YAML loading in pretrained vocoder configuration</h3>
+            <p>Loading an untrusted ParallelWaveGAN vocoder configuration could execute arbitrary code. The fix replaces the unsafe YAML loader with safe parsing.</p>
+            <dl class="facts"><div><dt>Severity</dt><dd>High · CVSS 8.8</dd></div><div><dt>Fixed in</dt><dd>202609.post2</dd></div><div><dt>Published</dt><dd>11 September 2026</dd></div></dl>
+            <p class="recognition">Credited as the reporter. The maintainer also acknowledged that the report prompted a wider repository review and an additional security fix.</p>
+            <div class="source-links"><a href="https://github.com/espnet/espnet/security/advisories/GHSA-rvjf-ppg9-9rwg">Read the advisory <span aria-hidden="true">↗</span></a><a href="https://github.com/espnet/espnet/pull/6662#issuecomment-5641123607">Maintainer acknowledgment <span aria-hidden="true">↗</span></a><a href="https://github.com/espnet/espnet/pull/6662">Fix PR <span aria-hidden="true">↗</span></a></div>
+            <p class="reference">GHSA-rvjf-ppg9-9rwg · CVE request pending as of 12 September 2026 (<a href="https://github.com/espnet/espnet/pull/6662#issuecomment-5641504950">maintainer confirmation</a>).</p>
+          </div>
+        </article>
+        <article class="finding" aria-labelledby="putty-title">
+          <div class="finding-index"><span>02 / PuTTY</span><span class="status">Fixed · Public credit</span></div>
+          <div class="finding-body">
+            <p class="category">SSH tooling · Memory safety</p>
+            <h3 id="putty-title">Missing Argon2 parameter validation in private-key files</h3>
+            <p>A malicious PPK file could cause a buffer overflow in password hashing. PuTTY added validation of the Argon2 parameters read from the key file.</p>
+            <dl class="facts"><div><dt>Vendor classification</dt><dd>Security vulnerability</dd></div><div><dt>Fixed in</dt><dd>PuTTY 0.85</dd></div></dl>
+            <blockquote>“Thanks to Christian Terörde for discovering this bug.”<cite>— PuTTY maintainers</cite></blockquote>
+            <p class="recognition">The vendor describes a narrow attack scenario requiring an externally supplied private-key file. A crash is the expected impact; controlled code execution is not established.</p>
+            <div class="source-links"><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/argon2-parameter-checks.html">Vendor advisory &amp; credit <span aria-hidden="true">↗</span></a><a href="https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/">Release fix record <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="about wrap" aria-labelledby="about-title">
+      <div><p class="eyebrow">The researcher</p><h2 id="about-title">Christian Terörde</h2><p>Also known as <strong>0xWaidwerk</strong>. This collection brings together vendor-published findings and credit from coordinated vulnerability disclosure.</p></div>
+      <nav class="profiles" aria-label="Researcher profiles"><a href="https://hackerone.com/0xwaidwerk">HackerOne <span aria-hidden="true">↗</span></a><a href="https://app.intigriti.com/researcher/profile/0xwaidwerk">Intigriti <span aria-hidden="true">↗</span></a><a href="https://github.com/ChristianTeroerde">GitHub <span aria-hidden="true">↗</span></a></nav>
+    </section>
+  </main>
+  <footer class="wrap"><span>© 2026 Christian Terörde</span><span>Sources checked 12 September 2026</span></footer>
+</body>
+</html>
