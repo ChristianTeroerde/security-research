@@ -4,8 +4,9 @@ Personal hall of fame for **0xWaidwerk**, containing publicly credited findings 
 
 - **ESPnet** — unsafe YAML configuration loading; High, CVSS 8.8; fixed in 202609.post2. [Advisory and reporter credit](https://github.com/espnet/espnet/security/advisories/GHSA-rvjf-ppg9-9rwg).
 - **PuTTY** — missing Argon2 parameter validation in PPK files; fixed in 0.85. [Vendor advisory and acknowledgment](https://www.chiark.greenend.org.uk/~sgtatham/putty/wishlist/argon2-parameter-checks.html).
+- **OpenCOOP** — unauthenticated MCP host transport allowed read/write access to files in the configured workspace; High; fixed in `@opencoop/opencode-plugin` 1.15.0. [Advisory and accepted reporter credit](https://github.com/Pajand/opencoop/security/advisories/GHSA-8627-5r8q-pp5p).
 
-Sources checked 12 September 2026. Severity and impact follow the vendor's public assessment.
+Sources checked 4 October 2026. Severity and impact follow the vendors' public assessments.
 
 ## Site
 
