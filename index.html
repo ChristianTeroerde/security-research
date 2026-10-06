@@ -20,7 +20,7 @@
       <p class="eyebrow">Independent security research</p>
       <h1 id="page-title">Findings that<br>made it into <em>fixes.</em></h1>
       <p class="lede">A personal hall of fame: publicly credited research, with the advisories and acknowledgments behind it.</p>
-      <div class="intro-bottom"><a class="button" href="#findings">Explore the findings <span aria-hidden="true">↓</span></a><p><strong>03</strong> publicly credited findings</p></div>
+      <div class="intro-bottom"><a class="button" href="#findings">Explore the findings <span aria-hidden="true">↓</span></a><p><strong>05</strong> publicly credited findings</p></div>
     </section>
     <section class="research" id="findings" aria-labelledby="findings-title">
       <div class="wrap">
@@ -61,6 +61,28 @@
             <p class="reference">GHSA-8627-5r8q-pp5p · Affected versions &lt; 1.15.0</p>
           </div>
         </article>
+        <article class="finding" aria-labelledby="bizfilo-title">
+          <div class="finding-index"><span>04 / BizFilo</span><span class="status">Fixed · Public credit</span></div>
+          <div class="finding-body">
+            <p class="category">Shopify tooling · Access control</p>
+            <h3 id="bizfilo-title">Shopify MCP server exposed store data to unauthenticated network clients</h3>
+            <p>The server listened on all interfaces and accepted MCP tool calls without caller authentication. With an operator's Shopify token configured, a reachable client could invoke tools for customer and order data.</p>
+            <dl class="facts"><div><dt>Fixed in</dt><dd>1.1.1</dd></div><div><dt>Published</dt><dd>6 October 2026</dd></div></dl>
+            <p class="recognition">The maintainer's public security note credits 0xwaidwerk for the private report. The local reproduction used a dummy Shopify token.</p>
+            <div class="source-links"><a href="https://github.com/buildwithabid/shopify-mcp#security">Vendor fix and reporter credit <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
+        <article class="finding" aria-labelledby="whatsapp-title">
+          <div class="finding-index"><span>05 / ClickOnSearch</span><span class="status">Fixed · Public credit</span></div>
+          <div class="finding-body">
+            <p class="category">Messaging tooling · Access control</p>
+            <h3 id="whatsapp-title">Unauthenticated network access to the WhatsApp MCP server</h3>
+            <p>A reachable client could bypass the SDK's Host-header check and call the MCP server without credentials. The report demonstrated session initialization and tool listing; no WhatsApp account was linked during testing.</p>
+            <dl class="facts"><div><dt>Severity</dt><dd>High · CVSS 8.1</dd></div><div><dt>Fixed in</dt><dd>0.2.0</dd></div><div><dt>Published</dt><dd>6 October 2026</dd></div></dl>
+            <p class="recognition">The vendor advisory credits 0xwaidwerk. The maintainer also fixed the related LinkedIn MCP server after reviewing the shared exposure pattern.</p>
+            <div class="source-links"><a href="https://github.com/ClickOnSearch/ai-apps/blob/main/advisories/2026-10-06-mcp-servers-network-exposure.md">Vendor advisory and reporter credit <span aria-hidden="true">↗</span></a></div>
+          </div>
+        </article>
       </div>
     </section>
     <section class="about wrap" aria-labelledby="about-title">
@@ -68,6 +90,6 @@
       <nav class="profiles" aria-label="Researcher profiles"><a href="https://hackerone.com/0xwaidwerk">HackerOne <span aria-hidden="true">↗</span></a><a href="https://app.intigriti.com/researcher/profile/0xwaidwerk">Intigriti <span aria-hidden="true">↗</span></a><a href="https://github.com/ChristianTeroerde">GitHub <span aria-hidden="true">↗</span></a></nav>
     </section>
   </main>
-  <footer class="wrap"><span>© 2026 Christian Terörde</span><span>Sources checked 4 October 2026</span></footer>
+  <footer class="wrap"><span>© 2026 Christian Terörde</span><span>Sources checked 6 October 2026</span></footer>
 </body>
 </html>
