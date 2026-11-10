@@ -7,8 +7,9 @@ Personal hall of fame for **0xWaidwerk**, containing publicly credited findings 
 - **OpenCOOP** — unauthenticated MCP host transport allowed read/write access to files in the configured workspace; High; fixed in `@opencoop/opencode-plugin` 1.15.0. [Advisory and accepted reporter credit](https://github.com/Pajand/opencoop/security/advisories/GHSA-8627-5r8q-pp5p).
 - **BizFilo Shopify MCP** — unauthenticated network access to tools using the operator's Shopify token; fixed in `@buildwithabid/shopify-mcp-server` 1.1.1. [Vendor fix and reporter credit](https://github.com/buildwithabid/shopify-mcp#security).
 - **ClickOnSearch WhatsApp MCP** — unauthenticated network access to MCP tools; High, CVSS 8.1; fixed in `@clickonsearch/whatsapp-mcp-server` 0.2.0. [Vendor advisory and reporter credit](https://github.com/ClickOnSearch/ai-apps/blob/main/advisories/2026-10-06-mcp-servers-network-exposure.md).
+- **OpenProject** — read-only repository members could push through the Apache Git Smart-HTTP integration; Medium, CVSS 6.5; fixed in 17.9.7. [Advisory and reporter credit](https://github.com/opf/openproject/security/advisories/GHSA-g75c-9rjg-8cvj), [release credit](https://github.com/opf/openproject/releases/tag/v17.9.7).
 
-Sources checked 6 October 2026. Severity and impact follow the vendors' public assessments.
+Sources checked 10 November 2026. Severity and impact follow the vendors' public assessments.
 
 ## Site
 
